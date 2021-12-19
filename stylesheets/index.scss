@@ -7,8 +7,101 @@
 }
 
 body {
+  background-color: $very-light-gray;
   font: {
     family: 'Poppins', sans-serif;
     size: 15px;
   }
+}
+
+main {
+  width: 337px;
+  margin: 75px auto;
+}
+
+.content {
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 25px;
+  
+  &__header {
+    color: $very-dark-blue;
+    margin-bottom: 15px;
+    font: {
+      size: 25px;
+      weight: 700;
+    }
+    span {
+      font-weight: 200;
+      display: block;
+    }
+  }
+
+  &__description {
+    color: $grayish-blue;
+  }
+}
+
+.cards {
+  margin: 50px 0;
+  padding: 0 15px;
+}
+
+.card {
+  background-color: $white;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px $grayish-blue;
+
+  &__color {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border: {
+      top-left-radius: inherit;
+      top-right-radius: inherit;
+    }
+  }
+
+  &--cyan {
+    background-color: $cyan;
+  }
+  &--red {
+    background-color: $red;
+  }
+  &--orange {
+    background-color: $orange;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+
+  &__content {
+    padding: 20px 20px;
+  }
+
+  &__title {
+    color: $very-dark-blue;
+    margin-bottom: 5px;
+    font: {
+      size: 17px;
+      weight: 700;
+    }
+  }
+
+  &__description {
+    color: $grayish-blue;
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+  }
+
 }
