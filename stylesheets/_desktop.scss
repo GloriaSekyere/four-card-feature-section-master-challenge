@@ -1,18 +1,20 @@
 main {
-  width: 337px;
+  width: 75%;
   margin: 75px auto;
 }
 
 .content {
+  width: 45%;
+  margin: auto;
   text-align: center;
-  padding: 0 15px;
-  margin-bottom: 25px;
+  padding: 0 0;
+  margin-bottom: 30px;
   
   &__header {
     color: $very-dark-blue;
     margin-bottom: 15px;
     font: {
-      size: 25px;
+      size: 35px;
       weight: 700;
     }
     span {
@@ -28,63 +30,34 @@ main {
 
 .cards {
   margin: 50px 0;
-  padding: 0 15px;
+  padding: 0 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  height: 455px;
 }
 
 .card {
   background-color: $white;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   border-radius: 10px;
   box-shadow: 0 5px 10px $grayish-blue;
 
-  &__color {
-    display: block;
-    width: 100%;
-    height: 3px;
-    border: {
-      top-left-radius: inherit;
-      top-right-radius: inherit;
-    }
+  &--one {
+    grid-area: 1/1/2/2;
+    align-self: center;
   }
-
-  &--cyan {
-    background-color: $cyan;
+  &--two {
+    grid-area: 1/2/2/3;
+    align-self: flex-start;
   }
-  &--red {
-    background-color: $red;
+  &--three {
+    grid-area: 1/2/2/3;
+    align-self: flex-end;
   }
-  &--orange {
-    background-color: $orange;
-  }
-  &--blue {
-    background-color: $blue;
-  }
-
-  &__content {
-    padding: 20px 20px;
-  }
-
-  &__title {
-    color: $very-dark-blue;
-    margin-bottom: 5px;
-    font: {
-      size: 17px;
-      weight: 700;
-    }
-  }
-
-  &__description {
-    color: $grayish-blue;
-    margin-bottom: 30px;
-  }
-
-  &__image {
-    display: flex;
-    justify-content: flex-end;
-
-    img {
-      max-width: 90%;
-      height: auto;
-    }
+  &--four {
+    grid-area: 1/3/2/4;
+    align-self: center;
   }
 }
